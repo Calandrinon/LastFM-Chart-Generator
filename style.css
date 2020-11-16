@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ebebe0;
+}
+
+
+#heading {
+    color: #b6ca4e;
+    text-align: center;
+}
+
+
+#maincontainer {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+
+#col1 {
+    /*background-color: blue;*/
+    height: 100vh;
+}
+
+
+#col2 {
+    background-color: #e3ebbc;
+    border-radius: 30px;
+}
+
+
+#col3 {
+    /*background-color: green;*/
+}
