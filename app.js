@@ -8,7 +8,11 @@ function request_chart_json() {
     let url = `http://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&user=${username}&api_key=${api_key}&format=json`;
 
     $.getJSON(url, function(data) {
-        console.log(data);
+        let weekly_albums = data.weeklyalbumchart.album;
+
+        for (let i = 0; i < grid_size*grid_size; i++) {
+            console.log(weekly_albums[i].name);
+        }
     });
 }
 
