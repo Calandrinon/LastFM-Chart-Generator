@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 10px;
     padding: 0;
     background-color: #ebebe0;
 }
@@ -12,6 +12,13 @@ body {
 }
 
 
+#inputs {
+    text-align: center;
+    margin: 20px;
+    margin-top: 50px;
+}
+
+
 #maincontainer {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -20,7 +27,7 @@ body {
 
 #col1 {
     /*background-color: blue;*/
-    height: 100vh;
+    height: 98vh;
 }
 
 
