@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="config.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet"> 
     </head>
 
@@ -12,14 +14,9 @@
         <div id="maincontainer">
             <div class="column" id="col1"></div>
             <div class="column" id="col2">
-                <h1 id="heading">LastFM Chart Generator</h1>
+                <h1 id="heading">LastFM Weekly Chart Generator</h1>
                 <div id="inputs">
                     <input id="username" type="text" placeholder="Username">
-                    <select name="timespan" id="timespan">
-                        <option value="weekly">Weekly</option>
-                        <option value="monthly">Monthly</option>
-                        <option value="yearly">Yearly</option>
-                    </select>
                     <select name="gridsize" id="gridsize">
                         <option value="3">3x3</option>
                         <option value="5">5x5</option>
@@ -30,5 +27,6 @@
             <div class="column" id="col3"></div>
         </div>
     </body>
+
     <script src="app.js"></script>
 </html>
