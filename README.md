@@ -1,5 +1,5 @@
 # LastFM Chart Generator
-A LastFM chart generator which creates a chart of your recently listened and favorite albums/artists.
+A LastFM chart generator which creates a chart of your recently listened/favorite albums/artists.
 
 ## To-do:
 - [X] Create an ugly UI
@@ -8,3 +8,6 @@ A LastFM chart generator which creates a chart of your recently listened and fav
 - [X] Add button for sending request
 - [ ] Move Last.FM API request to backend
 - [ ] Write artist and album title on top of the album cover
+
+## Current state:
+![Screenshot](res/screenshot.png)
