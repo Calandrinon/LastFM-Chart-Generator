@@ -17,6 +17,7 @@ function build_chart_image(chart_object) {
         let album_cover = new Image();
         let artist_name = chart_object[album_index].artist["#text"];
         let album_title = chart_object[album_index].name.replace(/ /g, "+");
+        console.log(`${artist_name} - ${album_title}`);
         let url = `http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${api_key}&artist=${artist_name}&album=${album_title}&format=json`;
 
         let album_art_link = fetch(url).
@@ -34,7 +35,7 @@ function build_chart_image(chart_object) {
                     column = 0;
                 }
             }
-            console.log(row, column);
+            //console.log(row, column);
         });
         
     } 
