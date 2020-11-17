@@ -46,7 +46,6 @@ body {
 }
 
 
-#chart_image {
-    margin: 0px;
-    padding: 0px;
+#chart_canvas {
+    text-align: center;
 }

@@ -8,6 +8,7 @@ A LastFM chart generator which creates a chart of your recently listened/favorit
 - [X] Add button for sending request
 - [ ] Move Last.FM API request to backend
 - [ ] Write artist and album title on top of the album cover
+- [ ] Solve issues with missing album covers 
 
 ## Current state:
 ![Screenshot](res/screenshot.png)
