@@ -66,5 +66,3 @@ function main() {
     get_preferences();
     request_chart_json();
 }
-
-main();
