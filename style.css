@@ -39,3 +39,14 @@ body {
 
 #col3 {
 }
+
+
+#chart {
+    text-align: center;
+}
+
+
+#chart_image {
+    margin: 0px;
+    padding: 0px;
+}
