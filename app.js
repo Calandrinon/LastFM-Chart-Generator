@@ -20,14 +20,19 @@ function build_chart_image(chart_object) {
         let album_title = chart_object[album_index].name.replace(/ /g, "+");
         let url = `http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${api_key}&artist=${artist_name}&album=${album_title}&format=json`;
 
-        fetch(url).
+        let album_art_link = fetch(url).
             then(res => res.json()).
-            then(data => console.log(data.album.image[2]["#text"]));
-                //albums.images.push(data.album.image[2]["#text"]);
-        //console.log(albums);
+            then(data => {return data});
+        
+        album_art_link.then(function(result) {
+            albums.images.push(result.album.image[2]["#text"]);
+        });
     } 
 
     let index = 0;
+    console.log(albums.images);
+    console.log(albums.images.length);
+    console.log("wtf...");
     for (let i = 0; i < grid_size; i++) {
         for (let j = 0; j < grid_size; j++) {
             let image = new Image();
