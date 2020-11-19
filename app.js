@@ -8,10 +8,8 @@ function build_chart_image(chart_object) {
 
     let dummy_image = new Image();
     dummy_image.src = "https://lastfm.freetls.fastly.net/i/u/174s/dfb8c764b71741e0c1652f197daacd4a.png";
-    let image_width = dummy_image.width;
-    let image_height = dummy_image.height;
-    let row = 0;
-    let column = 0;
+    let image_width = dummy_image.width, image_height = dummy_image.height;
+    let row = 0, column = 0;
     
     for (let album_index = 0; album_index < grid_size * grid_size; album_index++) {
         let album_cover = new Image();
@@ -20,13 +18,11 @@ function build_chart_image(chart_object) {
         console.log(`${artist_name} - ${album_title}`);
         let url = `http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${api_key}&artist=${artist_name}&album=${album_title}&format=json`;
 
-        let album_art_link = fetch(url).
+        fetch(url).
             then(res => res.json()).
-            then(data => {return data});
-        
-        album_art_link.then(function(result) {
+            then(data => {
             let image = new Image();
-            image.src = result.album.image[2]["#text"];
+            image.src = data.album.image[2]["#text"];
             image.onload = function () {
                 context.drawImage(image, row * image_height, column * image_width);
                 column++;
@@ -35,7 +31,6 @@ function build_chart_image(chart_object) {
                     column = 0;
                 }
             }
-            //console.log(row, column);
         }).catch(error => console.log(error));
         
     } 
