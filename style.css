@@ -46,16 +46,16 @@ body {
 
 
 #chart_canvas {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin: 2em;
     text-align: center;
 }
 
 
 #some_text {
-    color: #b6ca4e;
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 2em;
+    color: #336600;
+    font-family: 'Antic Slab', serif;
+    margin: 2em;
+    text-align: center;
 }
 
 .button {
@@ -63,7 +63,7 @@ body {
     border: none;
     border-radius: 20px;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -72,11 +72,21 @@ body {
 
 .button:hover {
     background-color: #006600; /* Green */
-    color: white;
+    color: #d9ffb3;
 }
 
 
 .button:active {
     background-color: #003300; /* Green */
-    color: white;
+    color: #d9ffb3;
+}
+
+
+#gridsize {
+    height: 40px;
+}
+
+
+#username {
+    height: 40px;
 }
