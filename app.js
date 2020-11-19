@@ -36,7 +36,7 @@ function build_chart_image(chart_object) {
                 }
             }
             //console.log(row, column);
-        });
+        }).catch(error => console.log(error));
         
     } 
 
@@ -62,7 +62,14 @@ function get_preferences() {
 }
 
 
+function set_canvas_border() {
+    document.getElementById("chart_canvas").style.border = "3px solid #336600"; 
+    document.getElementById("chart_canvas").style.borderRadius = "20px"; 
+}
+
+
 function main() {
     get_preferences();
     request_chart_json();
+    set_canvas_border();
 }
